@@ -8,13 +8,27 @@ This site are being hosting on Firebase. To check it, [click here](https://my-ro
 ## Get started with Application locally
 
 Run only the react application locally, and follow the updates on code in real time
-### `npm start`
+```
+npm start
+```
 
 To deploy new version
-### `firebase deploy`
+```
+firebase deploy
+```
 
 ## Important!
 You should __ALWAYS__ create a new branch for new features and bug fixes, because the master branch should be used ONLY for deploys.
 
 To serve the application locally and check if everything goes ok before deploying it
-### `serve -s build` or `firebase serve` or `firebase emulators:start`
+```
+serve -s build`
+```
+or
+```
+firebase serve
+```
+or
+```
+firebase emulators:start
+```

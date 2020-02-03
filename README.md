@@ -16,3 +16,5 @@ To deploy new version
 ## Important!
 You should __ALWAYS__ create a new branch for new features and bug fixes, because the master branch should be used ONLY for deploys.
 
+## `serve -s build` or `firebase serve` or `firebase emulators:start`
+To serve the application locally and check if everything goes ok before deploying it

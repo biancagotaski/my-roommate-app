@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Home from './components/home/home';
+import LandingPage from './components/landingPage/landingPage';
+import Login from './components/login/login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <Router>
+        <div>
+          <h2>Using BrowserRouter as react Router</h2>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <ul className="navbar-nav mr-auto">
+            <li><Link to={'/'} className="nav-link"> Landing Page </Link></li>
+            <li><Link to={'/login'} className="nav-link">Login</Link></li>
+            <li><Link to={'/home'} className="nav-link">Home</Link></li>
+          </ul>
+          </nav>
+          <hr />
+          <Switch>
+              <Route exact path='/' component={LandingPage} />
+              <Route path='/login' component={Login} />
+              <Route path='/home' component={Home} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

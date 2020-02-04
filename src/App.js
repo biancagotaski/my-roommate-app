@@ -1,32 +1,59 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Home from './components/home/home';
-import LandingPage from './components/landingPage/landingPage';
-import Login from './components/login/login';
+import RouterApp from './constants/routes';
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase/app';
+import '@firebase/auth';
+import firebaseConfig from './constants/firebaseConfig';
+
+if(!firebase.apps.length){
+  try {
+    firebase.initializeApp(firebaseConfig);
+} catch (err) {
+    console.error("Firebase initialization error raised", err.stack);
+}
+}
+const firebaseApp = firebase;
+const firebaseAppAuth = firebaseApp.auth();
+const providers = { googleProvider: new firebase.auth.GoogleAuthProvider() };
 
 class App extends Component {
   render(){
+    const {
+      user,
+      signOut,
+      signInWithGoogle,
+    } = this.props;
     return (
-      <Router>
-        <div>
-          <h2>Using BrowserRouter as react Router</h2>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <ul className="navbar-nav mr-auto">
-            <li><Link to={'/'} className="nav-link"> Landing Page </Link></li>
-            <li><Link to={'/login'} className="nav-link">Login</Link></li>
-            <li><Link to={'/home'} className="nav-link">Home</Link></li>
-          </ul>
-          </nav>
-          <hr />
-          <Switch>
-              <Route exact path='/' component={LandingPage} />
-              <Route path='/login' component={Login} />
-              <Route path='/home' component={Home} />
-          </Switch>
-        </div>
-      </Router>
+      <div className="App">
+      <header className="App-header">
+        {
+          user 
+            ? <p>Hello, {user.displayName}</p>
+            : <p>Please sign in.</p>
+        }
+        {
+          user
+            ? <button onClick={signOut}>Sign out</button>
+            : <button onClick={signInWithGoogle}>Sign in with Google</button>
+        }
+      </header>
+    </div>
+
+      // <div>
+      //   <RouterApp></RouterApp>
+      //     <div>
+      //       {
+      //         user ? [ <p>Hello, {user.displayName}</p> ] : [ <p>Please sign in.</p> ]
+      //       }
+      //       {
+      //         user ? [ <button onClick={signOut}>Sign out</button> ] : [ <button onClick={signInWithGoogle}>Sign in with Google</button> ]
+      //       }
+      //     </div>
+      // </div>
     );
   }
 }
 
-export default App;
+export default withFirebaseAuth({
+  providers, firebaseAppAuth
+})(App);

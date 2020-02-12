@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/index';
-// import App from './components/App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import Firebase, { FirebaseContext } from './components/Firebase';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//This FirebaseContext.Provider allows that the firebase be initializated at the time that the application is initializated as well
+// Since firebase can be initializated only once and it needs to be used in any part of the application
+// Any other part of the application who needs to use this firebase instance, should use FirebaseContext.Consume
+ReactDOM.render(
+    <FirebaseContext.Provider value={new Firebase()}>
+        <App />
+    </FirebaseContext.Provider>,
+    document.getElementById('root')
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

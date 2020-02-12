@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
 const Navigation = () => (
-    <div>
+    <div className="container">
         <li>
             <Link to={ROUTES.SIGN_IN}>Sign In</Link>
         </li>
@@ -12,6 +12,9 @@ const Navigation = () => (
         </li>
         <li>
             <Link to={ROUTES.HOME}>Home</Link>
+        </li>
+        <li>
+            <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
         </li>
     </div>
 );

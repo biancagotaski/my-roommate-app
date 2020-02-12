@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Home from './components/home/Home';
-import LandingPage from './components/landingPage/LandingPage';
-import Login from './components/login/Login';
+import Home from './components/Home/Home';
+import LandingPage from './components/Landing/LandingPage';
+import Login from './components/SignIn/Login';
 import * as ROUTES from './constants/routes';
 
 class RouterApp extends Component {

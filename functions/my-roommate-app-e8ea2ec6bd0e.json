@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "my-roommate-app-268117",
+  "private_key_id": "e8ea2ec6bd0e77b122ae66b03a72d8379b06c538",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDW4KKTGRxK/tJN\nYEU4qetSzNuTPs9dp+WeZ88DL2agjFwdWzMvoman21PrKI+kRKyJ8+vpce9LvSJ3\nsXlEKnE9Fg2xveQby1tKtWb/SMH+y+MC0Z/uWbGOYRqsDce1WWfBQuK9e3CHNQF/\nLGEVCk7xr6rbS6aDbjJR+78TRAJfWMqJ7u/keUYO3lOemwElhcNg8AbOf4WsytWA\nytbm54tne8hmGdKNcwTQFxrCYIpf9XzPYo6/uerugmi9dz5frdwy5cftuS4tApzB\nIUfV9rQE3K4/GrLo4Z/Qwm/M9vzZJTp6NHJOVWxV1zV4h4nk5UeOI93XfM2Kw2OM\ntN9Th1BBAgMBAAECggEAHbcM5Hi5f+mDXa3thKuC3n1z9AXgmVwJlgFXEGKyt4sR\nhgHBr1mvBpF/JmsCij3w+lbgDfVymS+7n3/MfE++PytYk3bmH63cnxU8/BqssTay\n2wXwLv76Xe0xyg9RydNmVMSSJI/4fMoovdR+THGTfzrCzvbEPTK1BL9iqiBij5qv\n7/HA5KvsfajU2sm2M44mEdOZD5jcxjlszHss0dLsyN0x2EZqXdiYQR1fUhN5Cnbb\n3YZXeeWva/UbpNpfVEs06c3FbvuLfqbCz9E3g18NHzuLGbaRx8+ImF+w5/fo2v/J\nB7FRDLIDc8MJX+yNAWYVCUsLqlAfxdgtiJb6IjkIUQKBgQDtbOhJfUXEKwytzADT\nGDK14DXaxh6IWotaiNrL0qpUeHLbr56wE/dTKux6W7VjcQfBxjXHG84g3bllIsCz\n8UDLTKtS9nEMd1kpIqjDp5AN8Ju4ARKy/wHv2szMnBdR26yGwXUJy0rPquG0awWs\n5xl5cKY9lPDdlfihHqS5wP50ZQKBgQDnsCTD/mH/NEGo4lHXIR2QZhmXtCY50sPQ\nyOEe2g7fbm2aq8vfuFyI8yqOymne4LHzhLhgBkzAVJ5t5dlOq7TOjCiR7QAlQ15U\nnbURZfJCIlu6+TQM8+u1f+/IURSFw3Z/euCpc2QX6iIS1c6OGYgrkq8djWDNWtlL\nvmkafnmIrQKBgDLYdup+FHnNSlrR7H9ImFuQ15exhAppcZyC4HBz/hw260oW0yIc\nNIQwFhKiHzdblnCuFQg98Sfis/hvt9sRWHHxSmNq+YzU5lhD3uZ/tP73PzHpsOp6\naBzIu8E50FisdccqGPlu+ud8TffIT5/WogL61+8qPWcG3gcLO/W32gZtAoGBAKZ2\nkUPcjq5c7lwYF7MY0PQB15t+zQQ4oYZt/gk7pPn1jnxVuMqJ3Lps9APZ/M0s5c5Q\namRbwmNhqN7PCR4UEnlgjHmkLbmYOLtVAFZ6x9+qbfvdtv8jdhRW0oI7dyJQeOBI\n+gflp2HjUA32Xk0MnSCpaHY0MPv6rStVqJBnlIyVAoGAJR4ocdPode1cuEmjY5tp\nZI7ZqjlbpkWbaWQ32ZiJEIinU/X53O7Qfny/+1Pt82xe4V61QGr2TSEXwHHvHWb5\n14n9pCQA1AyPgc9P2UEbBsuxo9lwCiux24YGY01a3WfSiI09TioDhhnHzuiX1SxV\nouEbrDdbeRySY1p+shKOO/w=\n-----END PRIVATE KEY-----\n",
+  "client_email": "localserver@my-roommate-app-268117.iam.gserviceaccount.com",
+  "client_id": "118169956126109340530",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/localserver%40my-roommate-app-268117.iam.gserviceaccount.com"
+}

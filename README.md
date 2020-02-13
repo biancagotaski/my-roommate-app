@@ -12,6 +12,16 @@ Run only the react application locally, and follow the updates on code in real t
 npm start
 ```
 
+To build new features and test it locally before deploy
+```
+npm run build
+```
+
+To serve the application locally and check if everytinhg goes ok before deploying it
+```
+serve -s build
+```
+
 To deploy new version
 ```
 firebase deploy
@@ -19,16 +29,3 @@ firebase deploy
 
 ## Important!
 You should __ALWAYS__ create a new branch for new features and bug fixes, because the master branch should be used ONLY for deploys.
-
-To serve the application locally and check if everything goes ok before deploying it
-```
-serve -s build`
-```
-or
-```
-firebase serve
-```
-or
-```
-firebase emulators:start
-```

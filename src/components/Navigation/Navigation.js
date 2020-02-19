@@ -26,6 +26,9 @@ const NavigationAuth = () => (
                 <Link to={ROUTES.HOME}>Home</Link>
             </li>
             <li>
+                <Link to={ROUTES.ACCOUNT}>Perfil</Link>
+            </li>
+            <li>
                 <SignOutButton/>
             </li>
         </ul>

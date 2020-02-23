@@ -1,15 +1,6 @@
-// const firebaseConfig = {
-//     apiKey: "AIzaSyAbHVlyqeHGrTo5iAQYltZv-uwrf4GwfnM",
-//     authDomain: "my-roommate-app.firebaseapp.com",
-//     databaseURL: "https://my-roommate-app.firebaseio.com",
-//     projectId: "my-roommate-app",
-//     storageBucket: "my-roommate-app.appspot.com",
-//     messagingSenderId: "317039132853",
-//     appId: "1:317039132853:web:3d5e8d78089327f0073efc",
-//     measurementId: "G-BCSW471B2W"
-// };
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 
 const prodConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -35,10 +26,12 @@ const devConfig = {
 
 const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 
-export default class Firebase{
+class Firebase{
     constructor(){
         app.initializeApp(config);
+
         this.auth = app.auth();
+        this.db = app.database();
     }
 
     //Here is where I use the firebase API to use all kind of auth methods
@@ -55,8 +48,14 @@ export default class Firebase{
     doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
 
+    user = uid => this.db.ref(`users/${uid}`);
+
+    users = () => this.db.ref('users');
+
     // doSignInWithGoogle = () => this.auth.GoogleAuthProvider();
 
     // this.auth.GoogleAuthProvider();
 
 }
+
+export default Firebase;

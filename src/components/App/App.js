@@ -14,6 +14,7 @@ import AccountPage from '../Account/Account';
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
+import AdminPage from '../Admin/Admin';
 
 //THIS IS WHERE I CAN USE REDUX IN ORDER TO MANAGER STATES OF THE APPLICATION AND MAINTAIN THIS ORGANIZED
 const App = () => (
@@ -29,6 +30,7 @@ const App = () => (
             <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
             <Route exact path={ROUTES.HOME} component={HomePage}/>
             <Route exact path={ROUTES.ACCOUNT} component={AccountPage}/>
+            <Route exact path={ROUTES.ADMIN} component={AdminPage}/>
         </div>
     </Router>
 );
